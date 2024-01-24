@@ -27,9 +27,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $result = mysqli_query($conn, $sql);
 
         if ($result) {
-            echo "Task added successfully";
             header("location: home.php");
-            exit();
         } else {
             echo "Task not added successfully";
         }
@@ -44,9 +42,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
         $result = mysqli_query($conn, $sql);
         if ($result) {
-            echo "Task updated successfully";
             header("location: home.php");
-            exit();
         } else {
             echo "Error updating task: " . mysqli_error($conn);
         }
@@ -59,9 +55,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
         $result = mysqli_query($conn, $sql);
         if ($result) {
-            echo "Task deleted successfully";
             header("location: home.php");
-            exit();
         } else {
             die(mysqli_error($conn));
         }
@@ -74,9 +68,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
         $result = mysqli_query($conn, $sql);
         if ($result) {
-            echo "User deleted successfully";
             header("location: index.php");
-            exit();
         } else {
             die(mysqli_error($conn));
         }
@@ -89,7 +81,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
         $result = mysqli_query($conn, $sql);
         if ($result) {
-            echo "Task status updated successfully";
             header("location: home.php");
             exit();
         } else {
